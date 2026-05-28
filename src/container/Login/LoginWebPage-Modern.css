@@ -1,0 +1,407 @@
+/* ============================================
+   MODERN LOGIN PAGE STYLES
+   ============================================ */
+
+.box-login {
+  background: linear-gradient(135deg, #f7edd5 0%, #f0e6c9 100%);
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#formHolder {
+  padding: 0;
+}
+
+#formHolder .row {
+  display: flex;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background: white;
+}
+
+/* ============================================
+   BRAND BOX (LEFT SIDE)
+   ============================================ */
+
+.brand {
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 500px;
+  box-shadow: none;
+  transition: all 0.6s cubic-bezier(1, -0.375, 0.285, 0.995);
+  z-index: 1;
+}
+
+.brand::before {
+  content: "";
+  display: none;
+}
+
+.brand.active {
+  width: 100%;
+}
+
+.brand a.logo {
+  color: #71cd14;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1em;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.brand a.logo span {
+  font-size: 36px;
+  color: #fff;
+  transform: translateX(-5px);
+  display: inline-block;
+}
+
+.brand .heading {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  text-align: left;
+  transition: all 0.6s;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand .heading.active {
+  top: auto;
+  left: auto;
+  transform: none;
+}
+
+.brand .heading h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #71cd14;
+  letter-spacing: 2px;
+}
+
+.brand .heading p {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 1px;
+  white-space: normal;
+  font-family: "Raleway", sans-serif;
+  color: #ecf0f1;
+  line-height: 1.6;
+}
+
+/* ============================================
+   FORM CONTAINER (RIGHT SIDE)
+   ============================================ */
+
+.form {
+  position: relative;
+  flex: 1;
+}
+
+.form .form-peice {
+  background: #fff;
+  min-height: 500px;
+  margin: 0;
+  box-shadow: none;
+  color: #bbbbbb;
+  padding: 60px 40px;
+  transition: all 0.9s cubic-bezier(1, -0.375, 0.285, 0.995);
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 130%;
+  overflow: hidden;
+}
+
+.form .form-peice.switched {
+  transform: translateX(-100%);
+  width: 100%;
+  left: 0;
+}
+
+.form form {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.form form .form-group {
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.form form .form-group.hasError input {
+  border-color: #ee4266 !important;
+}
+
+.form form .form-group.hasError label {
+  color: #ee4266 !important;
+}
+
+.form form label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  transition: all 0.4s;
+  cursor: text;
+  z-index: 1;
+}
+
+.form form label.active {
+  transform: translateY(0);
+  font-size: 13px;
+}
+
+.form form label.fontSwitch {
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 600;
+}
+
+.form form input:not([type=submit]),
+.form form textarea {
+  background: #f8f9fa;
+  outline: none;
+  border: 2px solid #e9ecef;
+  display: block;
+  padding: 12px 14px;
+  width: 100%;
+  color: #333;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  z-index: 1;
+  transition: all 0.3s;
+  border-radius: 6px;
+}
+
+.form form input:not([type=submit]):focus,
+.form form textarea:focus {
+  background: #fff;
+  border-color: #71cd14;
+  box-shadow: 0 0 0 3px rgba(113, 205, 20, 0.1);
+}
+
+.form form input::placeholder {
+  color: #999;
+}
+
+/* ============================================
+   CTA (CALL TO ACTION) SECTION
+   ============================================ */
+
+.CTA {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.CTA input[type="submit"] {
+  background: linear-gradient(135deg, #71cd14 0%, #5cb50f 100%);
+  color: #fff;
+  border: none;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(113, 205, 20, 0.2);
+  font-family: "Montserrat", sans-serif;
+}
+
+.CTA input[type="submit"]:hover {
+  background: linear-gradient(135deg, #5cb50f 0%, #4a960d 100%);
+  box-shadow: 0 6px 16px rgba(113, 205, 20, 0.3);
+  transform: translateY(-2px);
+}
+
+.CTA input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.CTA a.switch {
+  color: #71cd14;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 8px 0;
+}
+
+.CTA a.switch:hover {
+  color: #5cb50f;
+}
+
+/* ============================================
+   SOCIAL LOGIN BUTTONS
+   ============================================ */
+
+.form form .btn-social {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Override react-social-login-buttons */
+.rsocial {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 6px !important;
+  transition: all 0.3s !important;
+}
+
+.rsocial button {
+  width: 100% !important;
+  height: 44px !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rsocial button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  #formHolder .row {
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .brand {
+    min-height: 300px;
+    padding: 40px 30px;
+  }
+
+  .brand .heading h2 {
+    font-size: 36px;
+  }
+
+  .form .form-peice {
+    padding: 40px 30px;
+    min-height: auto;
+  }
+
+  .form form {
+    min-height: auto;
+  }
+
+  .form .form-peice,
+  .form .form-peice.switched {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    transform: none;
+  }
+
+  .form form .form-group {
+    margin-bottom: 18px;
+  }
+
+  .CTA {
+    margin-top: 24px;
+  }
+
+  .form form label {
+    font-size: 12px;
+  }
+
+  .form form input:not([type=submit]),
+  .form form textarea {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .CTA input[type="submit"] {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box-login {
+    padding: 16px;
+  }
+
+  .login-container {
+    padding: 0;
+  }
+
+  .brand {
+    min-height: 250px;
+    padding: 30px 20px;
+  }
+
+  .brand .heading h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .brand .heading p {
+    font-size: 14px;
+  }
+
+  .form .form-peice {
+    padding: 30px 20px;
+  }
+
+  .form form .form-group {
+    margin-bottom: 16px;
+  }
+
+  .CTA {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .CTA input[type="submit"],
+  .CTA a.switch {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,617 @@
+/* ============================================
+   MODERN COMPONENTS & UTILITIES
+   ============================================ */
+
+/* ============================================
+   MODAL & DIALOG STYLES
+   ============================================ */
+
+.modal {
+  .modal-dialog {
+    border-radius: 12px;
+    overflow: hidden;
+
+    .modal-content {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      animation: slideInDown 0.3s ease;
+    }
+  }
+
+  &.fade .modal-dialog.modal-dialog-centered {
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border: none;
+  padding: 20px 24px;
+  color: white;
+
+  h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .close {
+    color: white;
+    opacity: 0.8;
+    font-size: 24px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.modal-body {
+  padding: 28px 24px;
+  background: white;
+
+  .form-group {
+    margin-bottom: 18px;
+
+    label {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+      color: #333;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #e9ecef;
+      border-radius: 6px;
+      font-size: 13px;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #71cd14;
+        box-shadow: 0 0 0 3px rgba(113, 205, 20, 0.1);
+      }
+    }
+  }
+}
+
+.modal-footer {
+  background: #f9fafb;
+  border: none;
+  padding: 16px 24px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.btn-primary {
+      background: linear-gradient(135deg, #71cd14 0%, #5cb50f 100%);
+      color: white;
+      box-shadow: 0 2px 8px rgba(113, 205, 20, 0.2);
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(113, 205, 20, 0.3);
+      }
+    }
+
+    &.btn-secondary {
+      background: #e9ecef;
+      color: #333;
+
+      &:hover {
+        background: #dde0e3;
+      }
+    }
+  }
+}
+
+/* ============================================
+   TOAST NOTIFICATIONS
+   ============================================ */
+
+.Toastify__toast-container {
+  width: auto;
+  padding: 16px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  margin-bottom: 12px;
+  min-height: auto;
+  font-family: var(--font-family);
+
+  &--success {
+    background: linear-gradient(135deg, #71cd14 0%, #5cb50f 100%);
+    color: white;
+
+    .Toastify__toast-icon {
+      width: 20px;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
+  &--error {
+    background: linear-gradient(135deg, #ee4266 0%, #d93852 100%);
+    color: white;
+
+    .Toastify__toast-icon {
+      width: 20px;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
+  &--warning {
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+    color: white;
+
+    .Toastify__toast-icon {
+      width: 20px;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
+  &--info {
+    background: linear-gradient(135deg, #3AC6C6 0%, #2a9a9a 100%);
+    color: white;
+
+    .Toastify__toast-icon {
+      width: 20px;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
+
+.Toastify__toast-icon {
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.Toastify__progress-bar {
+  height: 3px;
+}
+
+/* ============================================
+   LOADING & SPINNER
+   ============================================ */
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(113, 205, 20, 0.2);
+  border-radius: 50%;
+  border-top-color: #71cd14;
+  animation: spin 0.8s linear infinite;
+
+  &.lg {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+
+  &.sm {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   BADGE & TAGS
+   ============================================ */
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &.badge-primary {
+    background: linear-gradient(135deg, #71cd14 0%, #5cb50f 100%);
+    color: white;
+  }
+
+  &.badge-secondary {
+    background: linear-gradient(135deg, #ee4266 0%, #d93852 100%);
+    color: white;
+  }
+
+  &.badge-accent {
+    background: linear-gradient(135deg, #3AC6C6 0%, #2a9a9a 100%);
+    color: white;
+  }
+
+  &.badge-light {
+    background: #f0f0f0;
+    color: #333;
+  }
+
+  &.badge-outline {
+    background: transparent;
+    border: 1px solid #71cd14;
+    color: #71cd14;
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #f0f0f0;
+  color: #333;
+  margin: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #71cd14;
+    color: white;
+  }
+
+  &.active {
+    background: #71cd14;
+    color: white;
+  }
+}
+
+/* ============================================
+   ALERT & MESSAGES
+   ============================================ */
+
+.alert {
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+
+  &-icon {
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+
+  &-content {
+    flex: 1;
+
+    &-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    &-desc {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+  }
+
+  &-close {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-success {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+
+  &-error {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+
+  &-warning {
+    background: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+  }
+
+  &-info {
+    background: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+  }
+}
+
+/* ============================================
+   DROPDOWN
+   ============================================ */
+
+.dropdown {
+  .dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+    animation: slideInDown 0.2s ease;
+
+    .dropdown-item {
+      padding: 10px 16px;
+      font-size: 13px;
+      color: #333;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #f0f0f0;
+        color: #71cd14;
+        padding-left: 20px;
+      }
+
+      &.active {
+        background: #71cd14;
+        color: white;
+      }
+
+      &:disabled {
+        color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+
+    .dropdown-divider {
+      margin: 4px 0;
+    }
+  }
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+
+.pagination {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .page-item {
+    .page-link {
+      padding: 8px 12px;
+      border: 1px solid #e9ecef;
+      color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: #71cd14;
+        color: #71cd14;
+        background: #f9fafb;
+      }
+    }
+
+    &.active .page-link {
+      background: linear-gradient(135deg, #71cd14 0%, #5cb50f 100%);
+      color: white;
+      border-color: #71cd14;
+    }
+
+    &.disabled .page-link {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+
+  .breadcrumb-item {
+    font-size: 13px;
+
+    a {
+      color: #71cd14;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #5cb50f;
+      }
+    }
+
+    &.active {
+      color: #666;
+    }
+
+    &::before {
+      content: '/';
+      margin: 0 4px;
+      color: #ccc;
+    }
+
+    &:first-child::before {
+      content: '';
+      margin: 0;
+    }
+  }
+}
+
+/* ============================================
+   TABLE STYLES
+   ============================================ */
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    background: #f9fafb;
+    border-bottom: 2px solid #e9ecef;
+
+    th {
+      padding: 14px;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #333;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid #e9ecef;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #f9fafb;
+      }
+
+      td {
+        padding: 14px;
+        font-size: 13px;
+        color: #333;
+      }
+    }
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    margin: 20px;
+  }
+
+  .alert {
+    gap: 10px;
+    padding: 12px;
+
+    &-icon {
+      font-size: 16px;
+    }
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+
+  .pagination {
+    gap: 4px;
+
+    .page-link {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-dialog {
+    width: 100%;
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .Toastify__toast-container {
+    width: calc(100% - 16px);
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+  }
+
+  .pagination {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 8px 0;
+  }
+}
